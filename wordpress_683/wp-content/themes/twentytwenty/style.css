@@ -6582,3 +6582,18 @@ a.to-the-top > * {
 		width: calc(100% - 8rem);
 	}
 }
+
+/* footer- */
+.footer-dark .social a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.footer-dark .social a:hover {
+  color: #ffcc00;
+}
+.footer-dark p {
+  margin: 0;
+  line-height: 1.5;
+}

@@ -1,70 +1,44 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the opening of the #site-footer div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * Custom footer for Twenty Twenty theme
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
  * @since Twenty Twenty 1.0
  */
-
 ?>
-			<footer id="site-footer" class="header-footer-group">
 
-				<div class="section-inner">
+<footer id="site-footer" class="header-footer-group">
 
-					<div class="footer-credits">
+  <div class="footer-dark" style="background-color:#007b5e; padding:30px 0; color:#fff; text-align:center;">
+    <div class="container">
 
-						<p class="footer-copyright">&copy;
-							<?php
-							/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
-							$date_format = _x( 'Y', 'copyright date format', 'twentytwenty' );
-							if ( function_exists( 'wp_date' ) ) {
-								echo wp_date( $date_format );
-							} else {
-								echo date_i18n( $date_format );
-							}
-							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						</p><!-- .footer-copyright -->
+      <div class="social" style="margin-bottom:15px;">
+        <a href="#" style="color:#fff; margin:0 10px; font-size:20px;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="color:#fff; margin:0 10px; font-size:20px;"><i class="fab fa-twitter"></i></a>
+		<a href="#" style="color:#fff; margin:0 10px; font-size:20px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:#fff; margin:0 10px; font-size:20px;"><i class="fab fa-google-plus"></i></a>
+        <a href="#" style="color:#fff; margin:0 10px; font-size:20px;"><i class="fas fa-envelope"></i></a>
+      </div>
 
-						<?php
-						if ( function_exists( 'the_privacy_policy_link' ) ) {
-							the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );
-						}
-						?>
+      <p style="margin-top:10px; font-size:14px;">
+        National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia
+        [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]
+      </p>
 
-						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentytwenty' ) ); ?>">
-								<?php _e( 'Powered by WordPress', 'twentytwenty' ); ?>
-							</a>
-						</p><!-- .powered-by-wordpress -->
+      <p style="margin-top:10px; font-weight:bold;">
+        © <?php echo date('Y'); ?> All right Reversed. Sunlimetech
+      </p>
 
-					</div><!-- .footer-credits -->
+      <a href="#site-header" class="to-the-top" style="display:block; margin-top:15px; color:#fff; font-size:14px;">
+        To the top <span class="arrow" aria-hidden="true">&uarr;</span>
+      </a>
 
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-long -->
-						<span class="to-the-top-short">
-							<?php
-							/* translators: %s: HTML character for up arrow. */
-							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
-							?>
-						</span><!-- .to-the-top-short -->
-					</a><!-- .to-the-top -->
+    </div>
+  </div>
 
-				</div><!-- .section-inner -->
+</footer>
 
-			</footer><!-- #site-footer -->
-
-		<?php wp_footer(); ?>
-
-	</body>
+<?php wp_footer(); ?>
+</body>
 </html>
